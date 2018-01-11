@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>折线图</title>
+	<script src="js/jquery-1.4.2.min.js"></script>
+	<script src="js/echarts.js"></script>
+</head> 
+<body > 
+    <div align="center">   
+    </div>
+    <!--<script src="${pageContext.request.contextPath}/source/echarts/myTheme.js"></script>-->
+    <script type="text/javascript">
+     
+    //区划统计长连接查询
+        function longPolling() { 
+           $.post("http://localhost:8080/hello",function(result,status){
+           	
+	   		console.log(result);
+	   		 var obj = eval('(' + result + ')');
+	   		 console.log(obj);
+	   		   
+			  }); 
+      		  }
+    
+    longPolling();
+    </script>
+</body>
+</html> 
